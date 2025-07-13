@@ -41,23 +41,26 @@ class Member:
                  first_name: str,
                  last_name: str,
                  phone_number: str,
-                 school: str,
-                 address: str = "",
+                 school: str = "null",
+                 address: str = "null",
                  sex: str = "",
                  commission_: str = "",
-                 promo: str = ""):
+                 promo: str = "null"
+                 ):
         self.number = number
         self.first_name = self.reformat_first_name(first_name)
         self.last_name = last_name.upper()
         self.address = address.strip().title()
         self.phone_number = self.reformat_phone_number(phone_number)
-        self.school = school.upper().strip()
+        # self.school = school.upper().strip()
         self.sex = sex
         self.commission_ = commission_.strip().upper()
-        self.promo = promo.strip()
+        # self.promo = promo.strip()
         self.id_number = self.get_id_number()
         self.project_name = project_name
-        print("initialize...")
+        # print("initialize...")
+        if len(first_name) > 20:
+                    print(f"{number} - {first_name}")
 
     @staticmethod
     def reformat_phone_number(number: str) -> str:
@@ -76,20 +79,21 @@ class Member:
         return first_name
 
     def get_id_number(self) -> str:
-        schools = {
-            "DSTI": 1,
-            "DGAE": 2,
-            "ST2AN": 3,
-            "DGO": 4,
-            "DU2ADT": 5,
-            "TECNA": 6,
-            "STA": 7,
-            "SEG":8
-        }
-        school_number = schools.get(self.school)
+        # schools = {
+        #     "DSTI": 1,
+        #     "DGAE": 2,
+        #     "ST2AN": 3,
+        #     "DGO": 4,
+        #     "DU2ADT": 5,
+        #     "TECNA": 6,
+        #     "STA": 7,
+        #     "SEG":8
+        # }
+        # school_number = schools.get(self.school)
 
         # id_number = f"{self.sex}-{str(self.number).zfill(3)}-{str(school_number).zfill(2)}-{str(self.promo).zfill(2)}"
-        id_number = f"{self.sex}-{str(self.promo).zfill(2)}-{str(self.number).zfill(3)}"
+        # id_number = f"{self.sex}-{str(self.promo).zfill(2)}-{str(self.number).zfill(3)}"
+        id_number = f"{self.sex}-{str(self.number).zfill(4)}"
         return id_number
 
     def get_user_info(self):
@@ -97,18 +101,18 @@ class Member:
             'NUMBER': self.number,
             'FIRSTNAME': self.first_name,
             'LASTNAME': self.last_name,
-            'ADDRESS': self.address,
+            # 'ADDRESS': self.address,
             'COMMISSION_': self.commission_,
             'PHONE-NUMBER': self.phone_number,
-            'SCHOOL': self.school,
-            'PROMO': self.promo,
+            # 'SCHOOL': self.school,
+            # 'PROMO': self.promo,
             'ID-NUMBER': self.id_number
         }
 
     def save_member(self):
         logging.info(f"Saving member -- No : {self.number}")
         Member.DB.insert(self.__dict__)
-        print("saving...")
+        # print("saving...")
         return 1
 
 

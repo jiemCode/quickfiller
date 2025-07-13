@@ -20,22 +20,22 @@ def read(project_name: str):
             number = 0
             for row in content:
                 number += 1
-                print(number)
+                # print(number)
                 data = {
                     "number": number,
-                    "first_name": row[0],
-                    "last_name": row[1],
-                    "phone_number": row[2],
-                    "address": row[3],
-                    "school": row[4],
-                    "promo": row[5],
-                    "commission_": row[6],
-                    "sex": row[7],
+                    "first_name": row[1],
+                    "last_name": row[2],
+                    "phone_number": row[3],
+                    "address": "null",
+                    # "school": row[4],
+                    # "promo": row[5],
+                    "commission_": row[4],
+                    "sex": row[0],
                     "project_name": project_name,
                 }
 
                 member = Member(**_get_member(**data))
-                print(member.get_user_info())
+                # print(member.get_user_info())
                 member.save_member()
 
     except ValueError:
@@ -45,5 +45,5 @@ def read(project_name: str):
 if __name__ == "__main__":
     name = project.this_project()[1]
     print(name)
-    read(project_name=name)
+    read(project_name="islaahu_daarayni")
     pass

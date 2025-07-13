@@ -14,10 +14,10 @@ def create_svg(info, file_name: str = "undefined-000"):
     fields = [
                 "first_name",
                 "last_name",
-                "address",
+                # "address",
                 "commission_",
                 "phone_number",
-                "school",
+                # "school",
                 "id_number",
             ]
 
@@ -54,21 +54,10 @@ def make_files(data: dict = get_members()):
             except AttributeError:
                 pass
 
-            file_name = f"{member_number}-{member_name}"
+            file_name = f"{member["sex"]}-{member_number}-{member_name}"
             print(file_name)
             create_svg(info=member, file_name=file_name)
 
 
 if __name__ == "__main__":
-    # member_info = {
-    #     "first_name": "Max",
-    #     "last_name": "Diop",
-    #     "address": "Thies",
-    #     "commission": "Finance",
-    #     "school": "ESTI",
-    #     "phone_number": "77 679 28 24",
-    #     "id_number": "911-619"
-    # }
-    # create_svg(info=member_info)
-
     make_files()

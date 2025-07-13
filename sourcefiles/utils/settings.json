@@ -1,1 +1,43 @@
-{}
+{
+    "_default": {
+        "1": {
+            "project_name": "dxx_card_2025",
+            "project_path": "/home/jiem/Projects/quickfill/Projects/dxx_card_2025",
+            "project_settings": "/home/jiem/Projects/quickfill/Projects/dxx_card_2025/utils/dxx_card_2025-settings.json",
+            "directories": {
+                "model": "/home/jiem/Projects/quickfill/Projects/dxx_card_2025/model",
+                "data": "/home/jiem/Projects/quickfill/Projects/dxx_card_2025/data",
+                "db": "/home/jiem/Projects/quickfill/Projects/dxx_card_2025/db",
+                "utils": "/home/jiem/Projects/quickfill/Projects/dxx_card_2025/utils",
+                "output": "/home/jiem/Projects/quickfill/Projects/dxx_card_2025/output"
+            },
+            "files": {
+                "settings": "/home/jiem/Projects/quickfill/Projects/dxx_card_2025/utils/dxx_card_2025-settings.json",
+                "process": "/home/jiem/Projects/quickfill/Projects/dxx_card_2025/utils/dxx_card_2025-process.log",
+                "model": "/home/jiem/Projects/quickfill/Projects/dxx_card_2025/model/dxx_card_2025-model.svg",
+                "data": "/home/jiem/Projects/quickfill/Projects/dxx_card_2025/data/dxx_card_2025.csv",
+                "db": "/home/jiem/Projects/quickfill/Projects/dxx_card_2025/db/dxx_card_2025-db.json"
+            }
+        },
+        "2": {
+            "project_name": "islaahu_daarayni",
+            "project_path": "/home/jiem/Projects/quickfill/Projects/islaahu_daarayni",
+            "project_settings": "/home/jiem/Projects/quickfill/Projects/islaahu_daarayni/utils/islaahu_daarayni-settings.json",
+            "directories": {
+                "model": "/home/jiem/Projects/quickfill/Projects/islaahu_daarayni/model",
+                "data": "/home/jiem/Projects/quickfill/Projects/islaahu_daarayni/data",
+                "db": "/home/jiem/Projects/quickfill/Projects/islaahu_daarayni/db",
+                "utils": "/home/jiem/Projects/quickfill/Projects/islaahu_daarayni/utils",
+                "output": "/home/jiem/Projects/quickfill/Projects/islaahu_daarayni/output"
+            },
+            "files": {
+                "settings": "/home/jiem/Projects/quickfill/Projects/islaahu_daarayni/utils/islaahu_daarayni-settings.json",
+                "process": "/home/jiem/Projects/quickfill/Projects/islaahu_daarayni/utils/islaahu_daarayni-process.log",
+                "model": "/home/jiem/Projects/quickfill/Projects/islaahu_daarayni/model/islaahu_daarayni-model.svg",
+                "data": "/home/jiem/Projects/quickfill/Projects/islaahu_daarayni/data/islaahu_daarayni.csv",
+                "db": "/home/jiem/Projects/quickfill/Projects/islaahu_daarayni/db/islaahu_daarayni-db.json"
+            }
+        }
+    },
+    "current_project": "islaahu_daarayni"
+}
